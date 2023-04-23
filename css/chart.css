@@ -1,0 +1,386 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.icons {
+  width: 10%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  background-color: blue;
+  padding: 30px;
+}
+
+.grid .goals-container {
+  background-color: #f2f5f8;
+  grid-column: 1/3;
+  height: 80vh;
+}
+
+.grid .goals-container .goals-items {
+  margin: 15px;
+  grid-column: 1/3;
+}
+
+.grid .goals-container .goals-items .header {
+  color: blue;
+  font-weight: 600;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #c5d0dc;
+}
+
+.grid .goals-container .goals-items .goals {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.grid .goals-container .goals-items .goals .items {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #c5d0dc;
+  gap: 40px;
+}
+
+.grid .goals-container .goals-items .goals .items .icons {
+  margin-left: 40px;
+}
+
+.grid .goals-container .goals-items .goals .items .text {
+  margin-bottom: 10px;
+}
+
+/* Team */
+
+.grid .team-container {
+  background-color: #f2f5f8;
+  margin-left: 15px;
+  height: 60vh;
+}
+.grid .team-container .team-mem {
+  margin: 15px;
+}
+
+.grid .team-container .team-mem .header {
+  color: blue;
+  font-weight: 600;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #c5d0dc;
+}
+
+.grid .team-container .team-mem .class {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.grid .team-container .team-mem .class .members {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.grid .team-container .team-mem .class .members .icons {
+  margin-left: 20px;
+}
+.grid .team-container .team-mem .class .members .text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Timeline */
+
+.grid .timeline-container {
+  background-color: #f2f5f8;
+  margin-left: 15px;
+  grid-row: 1/5;
+
+}
+
+.grid .timeline-container .timeline {
+  margin: 15px;
+
+}
+
+.grid .timeline-container .timeline .header {
+  color: blue;
+  font-weight: 600;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #c5d0dc;
+}
+
+.grid .timeline-container .timeline .project {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 15px;
+}
+
+.grid .timeline-container .timeline .project .items {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.grid .timeline-container .timeline .project .items .numbers {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 50px;
+  background-color: #9775fa;
+  padding: 10px;
+}
+
+.grid .timeline-container .timeline .project .items .numbers p {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+.grid .timeline-container .timeline .project .items .text {
+  padding-top: 5px;
+  border-bottom: 1.5px dotted #12b886;
+  width: 100%;
+}
+
+/* Scope */
+.grid .scope-container {
+  background-color: #f2f5f8;
+  margin-top: 20px;
+  grid-column: 1/3;
+  grid-row: 2;
+  height: 62vh;
+}
+
+.grid .scope-container .scope {
+  margin: 20px;
+}
+
+.grid .scope-container .scope .header {
+  color: blue;
+  font-weight: 600;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #c5d0dc;
+}
+
+.grid .scope-container .scope .flex {
+  display: flex;
+  gap: 70px;
+}
+
+.grid .scope-container .scope .text {
+  margin: 15px;
+}
+
+.grid .scope-container .scope .text h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.grid .scope-container .scope .text p {
+  padding-top: 15px;
+}
+
+/* Primary */
+.grid .primary-container {
+  background-color: #f2f5f8;
+  margin-top: 20px;
+  margin-left: 15px;
+  grid-column: 3/4;
+  grid-row: 2;
+}
+
+.grid .primary-container .primary {
+  margin: 20px;
+}
+
+.grid .primary-container .primary .header {
+  color: blue;
+  font-weight: 600;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #c5d0dc;
+}
+
+.grid .primary-container .primary .flex .box {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.grid .primary-container .primary .flex .box .icons svg {
+  width: 30px;
+}
+/* Media queries */
+@media (min-width: 992px) and (max-width: 1300px) {
+  .grid .goals-container .goals-items .goals .items .icons {
+    width: 20%;
+  }
+  .grid .team-container .team-mem .class .members .icons {
+    width: 20%;
+  }
+  .grid .team-container {
+    height: 100%;
+  }
+
+  .grid .timeline-container .timeline .project .items .numbers {
+    display: flex;
+    align-items: center;
+  }
+  .grid .primary-container {
+    height: 62vh;
+  }
+  .grid .primary-container .primary .flex .box .icons svg {
+    width: 40px;
+  }
+
+  .grid .primary-container .primary .flex .box .text {
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .grid .goals-container {
+    margin-left: 15px;
+    height: auto;
+  }
+  .grid .goals-container .goals-items .goals .items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid .team-container {
+    height: auto;
+  }
+
+  .grid .team-container .team-mem .class .members {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid .team-container .team-mem .class .members .icons {
+    position: relative;
+    left: 275px;
+  }
+  .grid .team-container .team-mem .class .members .icons svg{
+    width: 70px;
+  }
+
+  .grid .timeline-container .timeline .project .items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .grid .timeline-container .timeline .project .items .text p {
+    margin-top: 15px;
+  }
+  .grid .scope-container {
+    margin-left: 15px;
+  }
+  .grid .scope-container .scope .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+.grid .primary-container .primary{
+  height: auto;
+}
+  .grid .primary-container .primary .flex .box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid .primary-container .primary .flex .box .icons {
+    position: relative;
+    left: 310px;
+  }
+  .grid .primary-container .primary .flex .box .icons svg {
+    width: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .icons {
+    width: 20%;
+  }
+
+  .grid .goals-container{
+    height: auto;
+  }
+  .grid .goals-container .goals-items .goals .items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .grid .goals-container .goals-items .goals .items .icons {
+    width: 40px;
+  }
+  .grid .team-container {
+    margin-top: 20px;
+    margin-left: 0;
+    height: auto;
+  }
+
+  .grid .team-container .team-mem .class .members {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid .team-container .team-mem .class .members .icons {
+    position: relative;
+    left: 40%;
+    width: 40px;
+  }
+  .grid .timeline-container {
+    margin-top: 20px;
+    margin-left: 0;
+    width: auto;
+  }
+  .grid .timeline-container .timeline .project .items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .grid .timeline-container .timeline .project .text p{
+    margin-bottom: 20px;
+  }
+  .grid .scope-container{
+    height: auto;
+  }
+  .grid .scope-container .scope .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .grid .primary-container {
+    margin-left: 0;
+  }
+
+  .grid .primary-container .primary .flex .box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid .primary-container .primary .flex .box .icons {
+    position: relative;
+    left: 40%;
+  }
+}
